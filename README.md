@@ -24,7 +24,7 @@ Pairs really well with:
 You can find other JSDoc plugins for other, slower editors/IDEs. Like:
 
 * VS Codium plugin - [VS DocBlockr](https://github.com/jeremyvii/vs-docblockr) - Not as good as the ST one, but not bad
-* IntelliJ based editors (WebStorm, etc) have a built in plugin you can enable, but it's not open source, it's handled by Jet Brains, and it's almost completely useless. But you can still enable it and try it out. If enough people turn it on, maybe they'll prioritize making it better.
+* IntelliJ based editors (WebStorm, etc) have a [built in plugin you can enable](https://www.jetbrains.com/help/idea/creating-jsdoc-comments.html#ws_js_preview_jsdoc_comments_rendered_in_the_editor), but it's not open source, it's handled by Jet Brains, and it's almost completely useless. But you can still enable it and try it out. If enough people turn it on, maybe they'll prioritize making it better.
 
 But the point of using ESLint to enforce this is so that you don't have to do editor-specific things. Any team can adopt this approach and each dev can make ESLint work with whatever tools they use.
 
