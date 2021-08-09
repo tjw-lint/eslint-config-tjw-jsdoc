@@ -5,7 +5,7 @@ The Jared Wilcurt's strict JSDoc ESLint rules for obsessives.
 
 ## Using this
 
-1. `npm install --save-dev eslint-config-tjw-jsdoc`
+1. `npm install --save-dev eslint-plugin-jsdoc eslint-config-tjw-jsdoc`
 1. In your `.eslitrc.js` add `tjw-jsdoc` to your `extends` like so:
     ```js
     module.exports = {
