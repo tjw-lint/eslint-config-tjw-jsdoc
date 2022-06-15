@@ -9,7 +9,8 @@ module.exports = {
   rules: {
     'jsdoc/check-access': 1,
     'jsdoc/check-alignment': 1,
-    'jsdoc/check-examples': 1,
+    // Turn on after https://github.com/eslint/eslint/issues/14745 resolved
+    'jsdoc/check-examples': 0,
     'jsdoc/check-indentation': 0,
     'jsdoc/check-line-alignment': [
       1,
