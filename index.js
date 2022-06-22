@@ -17,9 +17,10 @@ module.exports = {
       'always',
       {
         'tags': [
-          'param',
           'arg',
           'argument',
+          'callback',
+          'param',
           'property',
           'prop',
           'returns',
