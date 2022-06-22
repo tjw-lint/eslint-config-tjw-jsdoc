@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tjw-jsdoc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "description": "The Jared Wilcurt's JSDoc Linting rules",
   "author": "The Jared Wilcurt",
@@ -11,7 +11,7 @@
     "lint"
   ],
   "dependencies": {
-    "eslint-plugin-jsdoc": "^39.3.2"
+    "eslint-plugin-jsdoc": "^39.3.3"
   },
   "repository": {
     "type": "git",
