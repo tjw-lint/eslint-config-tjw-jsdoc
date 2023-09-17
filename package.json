@@ -10,7 +10,7 @@
     "eslint",
     "lint"
   ],
-  "dependencies": {
+  "devDependencies": {
     "eslint-plugin-jsdoc": "^39.3.3"
   },
   "repository": {
