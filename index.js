@@ -43,7 +43,6 @@ module.exports = {
     'jsdoc/empty-tags': 1,
     'jsdoc/implements-on-classes': 1,
     'jsdoc/match-description': 1,
-    'jsdoc/newline-after-description': 1,
     'jsdoc/no-bad-blocks': 1,
     'jsdoc/no-defaults': 1,
     'jsdoc/no-types': 0,
@@ -89,7 +88,7 @@ module.exports = {
       'always',
       {
         count: 0,
-        noEndLines: true,
+        startLines: 1,
         tags: {
           example: {
             count: 1,
