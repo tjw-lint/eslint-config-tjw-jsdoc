@@ -19,6 +19,49 @@ The Jared Wilcurt's strict JSDoc ESLint rules for obsessives.
 * * *
 
 
+## What does it look like?
+
+The linter will enforce the formatting and types for functions arguments/returns.
+
+Below is an example function and what the formatting looks like for its comment block.
+
+* A description is required (and must end in a period). Followed by a return. This explains what the function does, and why it exists.
+* All arguments and return require a type, but can be an imported interface if complex/reusable. (see: [example](https://github.com/nwutils/create-desktop-shortcuts/blob/main/api-type-definitions.js))
+* All argument names must match the code (to ensure the comment isn't outdated).
+* All arguments and return must have description text explaining what they are/why they exist.
+* If the function returns a value, then the `@return` and a description will be required.
+* If the funciton has no `return`, then the comment must remove the `@return` line.
+* You can optionally include an `@example` after the main description and it will be formatted.
+* Almost all formatting can be applied automatically with ESLint's `--fix`.
+
+```js
+const { OPTIONS } = require('../api-type-definitions.js');
+
+/**
+ * Generic validation method to ensure a specific key on the options
+ * object is either a string, or removed.
+ *
+ * @param  {OPTIONS} options  User's options
+ * @param  {string}  key      The key within the OS object to be validated as an optional string
+ * @return {OPTIONS}          Validated or mutated user options
+ */
+function validateOptionalString (options, key) {
+  if (
+    typeof(options) === 'object' &&
+    Object(options).hasOwnProperty(key) &&
+    typeof(options[key]) !== 'string'
+  ) {
+    console.warn(options, 'Optional ' + key + ' must be a string');
+    delete options[key];
+  }
+  return options;
+}
+```
+
+
+* * *
+
+
 Pairs really well with:
 
 * Sublime Text plugin - [DocBlockr](https://packagecontrol.io/packages/DocBlockr) - Best in class
