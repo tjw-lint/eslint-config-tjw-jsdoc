@@ -89,6 +89,7 @@ module.exports = {
       {
         count: 0,
         startLines: 1,
+        applyToEndTag: false,
         tags: {
           example: {
             count: 1,
