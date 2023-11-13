@@ -26,13 +26,13 @@ The linter will enforce the formatting and types for functions arguments/returns
 Below is an example function and what the formatting looks like for its comment block.
 
 * A description is required (and must end in a period). Followed by a return. This explains what the function does, and why it exists.
-* All arguments and return require a type, but can be an imported interface if complex/reusable. (see: [example](https://github.com/nwutils/create-desktop-shortcuts/blob/main/api-type-definitions.js))
+* All arguments and return require a type, but can be an imported interface if complex/reusable. (see: [type definition example](https://github.com/nwutils/create-desktop-shortcuts/blob/main/api-type-definitions.js) or imported usage below)
 * All argument names must match the code (to ensure the comment isn't outdated).
 * All arguments and return must have description text explaining what they are/why they exist.
 * If the function returns a value, then the `@return` and a description will be required.
-* If the funciton has no `return`, then the comment must remove the `@return` line.
+* If the funciton has no `return`, then the JSDoc comment must remove the `@return` line.
 * You can optionally include an `@example` after the main description and it will be formatted.
-* Almost all formatting can be applied automatically with ESLint's `--fix`.
+* Almost all formatting can be applied automatically with ESLint's `--fix`. Including the vertically aligned columns for @token/{type}/name/description.
 
 ```js
 const { OPTIONS } = require('../api-type-definitions.js');
@@ -42,7 +42,7 @@ const { OPTIONS } = require('../api-type-definitions.js');
  * object is either a string, or removed.
  *
  * @param  {OPTIONS} options  User's options
- * @param  {string}  key      The key within the OS object to be validated as an optional string
+ * @param  {string}  key      The key on the user's options object to be validated as an optional string
  * @return {OPTIONS}          Validated or mutated user options
  */
 function validateOptionalString (options, key) {
