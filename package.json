@@ -1,8 +1,9 @@
 {
   "name": "eslint-config-tjw-jsdoc",
-  "version": "1.0.5",
+  "version": "2.0.0",
+  "type": "module",
   "main": "index.js",
-  "description": "The Jared Wilcurt's JSDoc Linting rules",
+  "description": "The Jared Wilcurt's Premium JSDoc Linting rules",
   "author": "The Jared Wilcurt",
   "keywords": [
     "tjw",
@@ -10,8 +11,9 @@
     "eslint",
     "lint"
   ],
-  "dependencies": {
-    "eslint-plugin-jsdoc": "^46.8.1"
+  "peerDependencies": {
+    "eslint-plugin-jsdoc": ">=48.2.4",
+    "eslint": ">=9"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tjw-lint/eslint-config-tjw-jsdoc/issues"
+  },
+  "volta": {
+    "node": "22.11.0"
   }
 }

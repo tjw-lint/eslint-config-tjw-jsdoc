@@ -1,18 +1,24 @@
 # eslint-config-tjw-jsdoc
 
-The Jared Wilcurt's strict JSDoc ESLint rules for obsessives.
+The Jared Wilcurt's premium JSDoc ESLint rules.
 
 
 ## Using this
 
+This assumes you have ESLint 9+ already set up, if not, refer to [this guide](https://github.com/tjw-lint/eslint-config-tjw-base).
+
+
 1. `npm install --save-dev eslint-plugin-jsdoc eslint-config-tjw-jsdoc`
-1. In your `.eslitrc.js` add `tjw-jsdoc` to your `extends` like so:
+1. In your `eslint.config.js`:
     ```js
-    module.exports = {
-      extends: [
-        'tjw-jsdoc'
-      ]
-    };
+    import tjwJsdoc from 'eslint-config-tjw-jsdoc';
+
+    export default [
+      ...tjwJsdoc,
+      {
+        // Your project specific settings
+      }
+    ];
     ```
 
 
@@ -26,16 +32,16 @@ The linter will enforce the formatting and types for functions arguments/returns
 Below is an example function and what the formatting looks like for its comment block.
 
 * A description is required (and must end in a period). Followed by a return. This explains what the function does, and why it exists.
-* All arguments and return require a type, but can be an imported interface if complex/reusable. (see: [type definition example](https://github.com/nwutils/create-desktop-shortcuts/blob/main/api-type-definitions.js) or imported usage below)
+* All arguments and return require a type, but can be an imported interface if complex/reusable. (see: [ESM Example](https://thejaredwilcurt.com/vue-snapshot-serializer/#types) or [CJS example](https://github.com/nwutils/create-desktop-shortcuts/blob/main/api-type-definitions.js))
 * All argument names must match the code (to ensure the comment isn't outdated).
 * All arguments and return must have description text explaining what they are/why they exist.
 * If the function returns a value, then the `@return` and a description will be required.
-* If the funciton has no `return`, then the JSDoc comment must remove the `@return` line.
+* If the function has no `return`, then the JSDoc comment must remove the `@return` line.
 * You can optionally include an `@example` after the main description and it will be formatted.
 * Almost all formatting can be applied automatically with ESLint's `--fix`. Including the vertically aligned columns for @token/{type}/name/description.
 
 ```js
-const { OPTIONS } = require('../api-type-definitions.js');
+/** @typedef {import('../types.js').OPTIONS} OPTIONS */
 
 /**
  * Generic validation method to ensure a specific key on the options
