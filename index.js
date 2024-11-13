@@ -26,7 +26,8 @@ export default [
             'property',
             'prop',
             'returns',
-            'return'
+            'return',
+            'typedef'
           ],
           customSpacings: {
             postDelimiter: 1,
