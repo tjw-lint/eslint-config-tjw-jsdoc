@@ -47,6 +47,9 @@ Below is an example function and what the formatting looks like for its comment 
  * Generic validation method to ensure a specific key on the options
  * object is either a string, or removed.
  *
+ * @example
+ * options = validateOptionalString(options, 'name');
+ *
  * @param  {OPTIONS} options  User's options
  * @param  {string}  key      The key on the user's options object to be validated as an optional string
  * @return {OPTIONS}          Validated or mutated user options
