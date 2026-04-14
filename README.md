@@ -86,7 +86,8 @@ But the point of using ESLint to enforce this is so that you don't have to do ed
 **See also:**
 
 * [eslint-config-tjw-base](https://github.com/tjw-lint/eslint-config-tjw-base) - Basic JavaScript Linting
-* [eslint-config-tjw-import](https://github.com/tjw-lint/eslint-config-tjw-import) - Lint import/require statements
+* [eslint-config-tjw-import](https://github.com/tjw-lint/eslint-config-tjw-import) - Lint import/require statements (ESLint <10)
+* [eslint-config-tjw-import-x](https://github.com/tjw-lint/eslint-config-tjw-import-x) - Lint import/require statements (ESLint 10+)
 * [eslint-config-tjw-jest](https://github.com/tjw-lint/eslint-config-tjw-jest) - Lint Jest/Vitest Unit Tests
 * [eslint-config-tjw-jsdoc](https://github.com/tjw-lint/eslint-config-tjw-jsdoc) - Enforce JSDoc comment blocks
 * [eslint-config-tjw-vue](https://github.com/tjw-lint/eslint-config-tjw-vue) - Lint Vue files
